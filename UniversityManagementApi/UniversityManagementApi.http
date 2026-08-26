@@ -1,0 +1,102 @@
+@UniversityManagementApi_HostAddress = https://localhost:7055
+
+GET {{UniversityManagementApi_HostAddress}}/api/students
+Accept: application/json
+
+###
+
+POST {{UniversityManagementApi_HostAddress}}/api/students
+Content-Type: application/json
+
+{
+  "firstName": "Adalet",
+  "lastName": "Dertli",
+  "email": "adalet@example.com",
+  "studentNumber":"102030"
+}
+ ###
+
+GET {{UniversityManagementApi_HostAddress}}/api/students/1
+Accept: application/json
+
+###
+
+PUT {{UniversityManagementApi_HostAddress}}/api/students/1
+Content-Type: application/json
+
+{
+  "firstName": "Adalet",
+  "lastName": "Dertli",
+  "email": "adaletdertli@example.com",
+  "studentNumber": "102030"
+}
+###
+GET {{UniversityManagementApi_HostAddress}}/api/students/1
+Accept: application/json
+
+###
+
+DELETE {{UniversityManagementApi_HostAddress}}/api/students/1
+
+###
+
+POST {{UniversityManagementApi_HostAddress}}/api/departments
+Content-Type: application/json
+
+{
+  "name": "Bilgisayar Muhendisligi",
+  "description": "Bilgisayar Muhendisligi Bolumu"
+}
+
+###
+
+POST {{UniversityManagementApi_HostAddress}}/api/teachers
+Content-Type: application/json
+
+{
+  "firstName": "Ahmet",
+  "lastName": "Aslan",
+  "email": "aahmet@example.com",
+  "employeeNumber": 1001,
+  "departmentId": 1
+}
+###
+DELETE {{UniversityManagementApi_HostAddress}}/api/teachers/2
+
+###
+GET {{UniversityManagementApi_HostAddress}}/api/teachers
+
+###
+
+POST {{UniversityManagementApi_HostAddress}}/api/courses
+Content-Type: application/json
+
+{
+  "name": "Veri Yapilari",
+  "code": "CENG201",
+  "credit": 4,
+  "teacherId": 1
+}
+
+###
+
+POST {{UniversityManagementApi_HostAddress}}/api/teacheroffices
+Content-Type: application/json
+
+{
+  "officeNumber": "204",
+  "floor": 2,
+  "teacherId": 1
+}
+
+###
+
+POST {{UniversityManagementApi_HostAddress}}/api/studentcourses
+Content-Type: application/json
+
+{
+  "studentId": 2,
+  "courseId": 1,
+  "enrollmentDate": "2026-08-26T00:00:00Z",
+  "grade": 85
+}

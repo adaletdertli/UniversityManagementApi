@@ -1,0 +1,518 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Adalet\\Desktop\\UniversityManagementApi\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Adalet\\AppData\\Roaming\\Microsoft\\UserSecrets\\f73f7bf2-6a32-411b-b1f9-f27fff50a737\\secrets.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{625CA7FD-070B-392C-3BCC-A088DFF2FFFF}|UniversityManagementApi\\UniversityManagementApi.csproj|c:\\users\\adalet\\desktop\\universitymanagementapi\\universitymanagementapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{625CA7FD-070B-392C-3BCC-A088DFF2FFFF}|UniversityManagementApi\\UniversityManagementApi.csproj|solutionrelative:universitymanagementapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{625CA7FD-070B-392C-3BCC-A088DFF2FFFF}|UniversityManagementApi\\UniversityManagementApi.csproj|c:\\users\\adalet\\desktop\\universitymanagementapi\\universitymanagementapi\\universitymanagementapi.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{625CA7FD-070B-392C-3BCC-A088DFF2FFFF}|UniversityManagementApi\\UniversityManagementApi.csproj|solutionrelative:universitymanagementapi\\universitymanagementapi.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{625CA7FD-070B-392C-3BCC-A088DFF2FFFF}|UniversityManagementApi\\UniversityManagementApi.csproj|c:\\users\\adalet\\desktop\\universitymanagementapi\\universitymanagementapi\\entities\\studentcourse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{625CA7FD-070B-392C-3BCC-A088DFF2FFFF}|UniversityManagementApi\\UniversityManagementApi.csproj|solutionrelative:universitymanagementapi\\entities\\studentcourse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{625CA7FD-070B-392C-3BCC-A088DFF2FFFF}|UniversityManagementApi\\UniversityManagementApi.csproj|c:\\users\\adalet\\desktop\\universitymanagementapi\\universitymanagementapi\\repositories\\concrete\\studentcourserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{625CA7FD-070B-392C-3BCC-A088DFF2FFFF}|UniversityManagementApi\\UniversityManagementApi.csproj|solutionrelative:universitymanagementapi\\repositories\\concrete\\studentcourserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{625CA7FD-070B-392C-3BCC-A088DFF2FFFF}|UniversityManagementApi\\UniversityManagementApi.csproj|c:\\users\\adalet\\desktop\\universitymanagementapi\\universitymanagementapi\\entities\\teacheroffice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{625CA7FD-070B-392C-3BCC-A088DFF2FFFF}|UniversityManagementApi\\UniversityManagementApi.csproj|solutionrelative:universitymanagementapi\\entities\\teacheroffice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{625CA7FD-070B-392C-3BCC-A088DFF2FFFF}|UniversityManagementApi\\UniversityManagementApi.csproj|c:\\users\\adalet\\desktop\\universitymanagementapi\\universitymanagementapi\\entities\\course.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{625CA7FD-070B-392C-3BCC-A088DFF2FFFF}|UniversityManagementApi\\UniversityManagementApi.csproj|solutionrelative:universitymanagementapi\\entities\\course.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{625CA7FD-070B-392C-3BCC-A088DFF2FFFF}|UniversityManagementApi\\UniversityManagementApi.csproj|c:\\users\\adalet\\desktop\\universitymanagementapi\\universitymanagementapi\\entities\\teacher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{625CA7FD-070B-392C-3BCC-A088DFF2FFFF}|UniversityManagementApi\\UniversityManagementApi.csproj|solutionrelative:universitymanagementapi\\entities\\teacher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{625CA7FD-070B-392C-3BCC-A088DFF2FFFF}|UniversityManagementApi\\UniversityManagementApi.csproj|c:\\users\\adalet\\desktop\\universitymanagementapi\\universitymanagementapi\\repositories\\concrete\\teacherrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{625CA7FD-070B-392C-3BCC-A088DFF2FFFF}|UniversityManagementApi\\UniversityManagementApi.csproj|solutionrelative:universitymanagementapi\\repositories\\concrete\\teacherrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{625CA7FD-070B-392C-3BCC-A088DFF2FFFF}|UniversityManagementApi\\UniversityManagementApi.csproj|c:\\users\\adalet\\desktop\\universitymanagementapi\\universitymanagementapi\\entities\\department .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{625CA7FD-070B-392C-3BCC-A088DFF2FFFF}|UniversityManagementApi\\UniversityManagementApi.csproj|solutionrelative:universitymanagementapi\\entities\\department .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{625CA7FD-070B-392C-3BCC-A088DFF2FFFF}|UniversityManagementApi\\UniversityManagementApi.csproj|c:\\users\\adalet\\desktop\\universitymanagementapi\\universitymanagementapi\\entities\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{625CA7FD-070B-392C-3BCC-A088DFF2FFFF}|UniversityManagementApi\\UniversityManagementApi.csproj|solutionrelative:universitymanagementapi\\entities\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{625CA7FD-070B-392C-3BCC-A088DFF2FFFF}|UniversityManagementApi\\UniversityManagementApi.csproj|c:\\users\\adalet\\desktop\\universitymanagementapi\\universitymanagementapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{625CA7FD-070B-392C-3BCC-A088DFF2FFFF}|UniversityManagementApi\\UniversityManagementApi.csproj|solutionrelative:universitymanagementapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{625CA7FD-070B-392C-3BCC-A088DFF2FFFF}|UniversityManagementApi\\UniversityManagementApi.csproj|c:\\users\\adalet\\desktop\\universitymanagementapi\\universitymanagementapi\\controllers\\coursescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{625CA7FD-070B-392C-3BCC-A088DFF2FFFF}|UniversityManagementApi\\UniversityManagementApi.csproj|solutionrelative:universitymanagementapi\\controllers\\coursescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{625CA7FD-070B-392C-3BCC-A088DFF2FFFF}|UniversityManagementApi\\UniversityManagementApi.csproj|c:\\users\\adalet\\desktop\\universitymanagementapi\\universitymanagementapi\\controllers\\departmentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{625CA7FD-070B-392C-3BCC-A088DFF2FFFF}|UniversityManagementApi\\UniversityManagementApi.csproj|solutionrelative:universitymanagementapi\\controllers\\departmentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{625CA7FD-070B-392C-3BCC-A088DFF2FFFF}|UniversityManagementApi\\UniversityManagementApi.csproj|c:\\users\\adalet\\desktop\\universitymanagementapi\\universitymanagementapi\\controllers\\studentcoursescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{625CA7FD-070B-392C-3BCC-A088DFF2FFFF}|UniversityManagementApi\\UniversityManagementApi.csproj|solutionrelative:universitymanagementapi\\controllers\\studentcoursescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{625CA7FD-070B-392C-3BCC-A088DFF2FFFF}|UniversityManagementApi\\UniversityManagementApi.csproj|c:\\users\\adalet\\desktop\\universitymanagementapi\\universitymanagementapi\\controllers\\studentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{625CA7FD-070B-392C-3BCC-A088DFF2FFFF}|UniversityManagementApi\\UniversityManagementApi.csproj|solutionrelative:universitymanagementapi\\controllers\\studentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{625CA7FD-070B-392C-3BCC-A088DFF2FFFF}|UniversityManagementApi\\UniversityManagementApi.csproj|c:\\users\\adalet\\desktop\\universitymanagementapi\\universitymanagementapi\\controllers\\teacherofficescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{625CA7FD-070B-392C-3BCC-A088DFF2FFFF}|UniversityManagementApi\\UniversityManagementApi.csproj|solutionrelative:universitymanagementapi\\controllers\\teacherofficescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{625CA7FD-070B-392C-3BCC-A088DFF2FFFF}|UniversityManagementApi\\UniversityManagementApi.csproj|c:\\users\\adalet\\desktop\\universitymanagementapi\\universitymanagementapi\\controllers\\teacherscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{625CA7FD-070B-392C-3BCC-A088DFF2FFFF}|UniversityManagementApi\\UniversityManagementApi.csproj|solutionrelative:universitymanagementapi\\controllers\\teacherscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{625CA7FD-070B-392C-3BCC-A088DFF2FFFF}|UniversityManagementApi\\UniversityManagementApi.csproj|c:\\users\\adalet\\desktop\\universitymanagementapi\\universitymanagementapi\\repositories\\interfaces\\istudentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{625CA7FD-070B-392C-3BCC-A088DFF2FFFF}|UniversityManagementApi\\UniversityManagementApi.csproj|solutionrelative:universitymanagementapi\\repositories\\interfaces\\istudentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{625CA7FD-070B-392C-3BCC-A088DFF2FFFF}|UniversityManagementApi\\UniversityManagementApi.csproj|c:\\users\\adalet\\desktop\\universitymanagementapi\\universitymanagementapi\\repositories\\concrete\\studentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{625CA7FD-070B-392C-3BCC-A088DFF2FFFF}|UniversityManagementApi\\UniversityManagementApi.csproj|solutionrelative:universitymanagementapi\\repositories\\concrete\\studentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{625CA7FD-070B-392C-3BCC-A088DFF2FFFF}|UniversityManagementApi\\UniversityManagementApi.csproj|c:\\users\\adalet\\desktop\\universitymanagementapi\\universitymanagementapi\\repositories\\interfaces\\istudentcourserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{625CA7FD-070B-392C-3BCC-A088DFF2FFFF}|UniversityManagementApi\\UniversityManagementApi.csproj|solutionrelative:universitymanagementapi\\repositories\\interfaces\\istudentcourserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{625CA7FD-070B-392C-3BCC-A088DFF2FFFF}|UniversityManagementApi\\UniversityManagementApi.csproj|c:\\users\\adalet\\desktop\\universitymanagementapi\\universitymanagementapi\\repositories\\concrete\\courserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{625CA7FD-070B-392C-3BCC-A088DFF2FFFF}|UniversityManagementApi\\UniversityManagementApi.csproj|solutionrelative:universitymanagementapi\\repositories\\concrete\\courserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{625CA7FD-070B-392C-3BCC-A088DFF2FFFF}|UniversityManagementApi\\UniversityManagementApi.csproj|c:\\users\\adalet\\desktop\\universitymanagementapi\\universitymanagementapi\\repositories\\concrete\\departmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{625CA7FD-070B-392C-3BCC-A088DFF2FFFF}|UniversityManagementApi\\UniversityManagementApi.csproj|solutionrelative:universitymanagementapi\\repositories\\concrete\\departmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{625CA7FD-070B-392C-3BCC-A088DFF2FFFF}|UniversityManagementApi\\UniversityManagementApi.csproj|c:\\users\\adalet\\desktop\\universitymanagementapi\\universitymanagementapi\\repositories\\concrete\\teacherofficerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{625CA7FD-070B-392C-3BCC-A088DFF2FFFF}|UniversityManagementApi\\UniversityManagementApi.csproj|solutionrelative:universitymanagementapi\\repositories\\concrete\\teacherofficerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{625CA7FD-070B-392C-3BCC-A088DFF2FFFF}|UniversityManagementApi\\UniversityManagementApi.csproj|c:\\users\\adalet\\desktop\\universitymanagementapi\\universitymanagementapi\\repositories\\interfaces\\idepartmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{625CA7FD-070B-392C-3BCC-A088DFF2FFFF}|UniversityManagementApi\\UniversityManagementApi.csproj|solutionrelative:universitymanagementapi\\repositories\\interfaces\\idepartmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{625CA7FD-070B-392C-3BCC-A088DFF2FFFF}|UniversityManagementApi\\UniversityManagementApi.csproj|c:\\users\\adalet\\desktop\\universitymanagementapi\\universitymanagementapi\\repositories\\interfaces\\icourserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{625CA7FD-070B-392C-3BCC-A088DFF2FFFF}|UniversityManagementApi\\UniversityManagementApi.csproj|solutionrelative:universitymanagementapi\\repositories\\interfaces\\icourserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{625CA7FD-070B-392C-3BCC-A088DFF2FFFF}|UniversityManagementApi\\UniversityManagementApi.csproj|c:\\users\\adalet\\desktop\\universitymanagementapi\\universitymanagementapi\\repositories\\interfaces\\iteacherrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{625CA7FD-070B-392C-3BCC-A088DFF2FFFF}|UniversityManagementApi\\UniversityManagementApi.csproj|solutionrelative:universitymanagementapi\\repositories\\interfaces\\iteacherrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{625CA7FD-070B-392C-3BCC-A088DFF2FFFF}|UniversityManagementApi\\UniversityManagementApi.csproj|c:\\users\\adalet\\desktop\\universitymanagementapi\\universitymanagementapi\\repositories\\interfaces\\iteacherofficerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{625CA7FD-070B-392C-3BCC-A088DFF2FFFF}|UniversityManagementApi\\UniversityManagementApi.csproj|solutionrelative:universitymanagementapi\\repositories\\interfaces\\iteacherofficerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{625CA7FD-070B-392C-3BCC-A088DFF2FFFF}|UniversityManagementApi\\UniversityManagementApi.csproj|c:\\users\\adalet\\desktop\\universitymanagementapi\\universitymanagementapi\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{625CA7FD-070B-392C-3BCC-A088DFF2FFFF}|UniversityManagementApi\\UniversityManagementApi.csproj|solutionrelative:universitymanagementapi\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{625CA7FD-070B-392C-3BCC-A088DFF2FFFF}|UniversityManagementApi\\UniversityManagementApi.csproj|c:\\users\\adalet\\desktop\\universitymanagementapi\\universitymanagementapi\\migrations\\20260825124428_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{625CA7FD-070B-392C-3BCC-A088DFF2FFFF}|UniversityManagementApi\\UniversityManagementApi.csproj|solutionrelative:universitymanagementapi\\migrations\\20260825124428_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{625CA7FD-070B-392C-3BCC-A088DFF2FFFF}|UniversityManagementApi\\UniversityManagementApi.csproj|c:\\users\\adalet\\desktop\\universitymanagementapi\\universitymanagementapi\\migrations\\20260826061959_addfluentconfigurations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{625CA7FD-070B-392C-3BCC-A088DFF2FFFF}|UniversityManagementApi\\UniversityManagementApi.csproj|solutionrelative:universitymanagementapi\\migrations\\20260826061959_addfluentconfigurations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "secrets.json",
+              "DocumentMoniker": "C:\\Users\\Adalet\\AppData\\Roaming\\Microsoft\\UserSecrets\\f73f7bf2-6a32-411b-b1f9-f27fff50a737\\secrets.json",
+              "RelativeDocumentMoniker": "..\\..\\AppData\\Roaming\\Microsoft\\UserSecrets\\f73f7bf2-6a32-411b-b1f9-f27fff50a737\\secrets.json",
+              "ToolTip": "C:\\Users\\Adalet\\AppData\\Roaming\\Microsoft\\UserSecrets\\f73f7bf2-6a32-411b-b1f9-f27fff50a737\\secrets.json",
+              "RelativeToolTip": "..\\..\\AppData\\Roaming\\Microsoft\\UserSecrets\\f73f7bf2-6a32-411b-b1f9-f27fff50a737\\secrets.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-08-26T13:13:16.092Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Course.cs",
+              "DocumentMoniker": "C:\\Users\\Adalet\\Desktop\\UniversityManagementApi\\UniversityManagementApi\\Entities\\Course.cs",
+              "RelativeDocumentMoniker": "UniversityManagementApi\\Entities\\Course.cs",
+              "ToolTip": "C:\\Users\\Adalet\\Desktop\\UniversityManagementApi\\UniversityManagementApi\\Entities\\Course.cs",
+              "RelativeToolTip": "UniversityManagementApi\\Entities\\Course.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-24T13:40:06.195Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "TeacherRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Adalet\\Desktop\\UniversityManagementApi\\UniversityManagementApi\\Repositories\\Concrete\\TeacherRepository.cs",
+              "RelativeDocumentMoniker": "UniversityManagementApi\\Repositories\\Concrete\\TeacherRepository.cs",
+              "ToolTip": "C:\\Users\\Adalet\\Desktop\\UniversityManagementApi\\UniversityManagementApi\\Repositories\\Concrete\\TeacherRepository.cs",
+              "RelativeToolTip": "UniversityManagementApi\\Repositories\\Concrete\\TeacherRepository.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAA8wDIAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-26T07:36:49.141Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Student.cs",
+              "DocumentMoniker": "C:\\Users\\Adalet\\Desktop\\UniversityManagementApi\\UniversityManagementApi\\Entities\\Student.cs",
+              "RelativeDocumentMoniker": "UniversityManagementApi\\Entities\\Student.cs",
+              "ToolTip": "C:\\Users\\Adalet\\Desktop\\UniversityManagementApi\\UniversityManagementApi\\Entities\\Student.cs",
+              "RelativeToolTip": "UniversityManagementApi\\Entities\\Student.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-24T13:40:23.271Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "DepartmentsController.cs",
+              "DocumentMoniker": "C:\\Users\\Adalet\\Desktop\\UniversityManagementApi\\UniversityManagementApi\\Controllers\\DepartmentsController.cs",
+              "RelativeDocumentMoniker": "UniversityManagementApi\\Controllers\\DepartmentsController.cs",
+              "ToolTip": "C:\\Users\\Adalet\\Desktop\\UniversityManagementApi\\UniversityManagementApi\\Controllers\\DepartmentsController.cs",
+              "RelativeToolTip": "UniversityManagementApi\\Controllers\\DepartmentsController.cs",
+              "ViewState": "AgIAADoAAAAAAAAAAAAAAFQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-26T08:28:11.222Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "StudentCourseRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Adalet\\Desktop\\UniversityManagementApi\\UniversityManagementApi\\Repositories\\Concrete\\StudentCourseRepository.cs",
+              "RelativeDocumentMoniker": "UniversityManagementApi\\Repositories\\Concrete\\StudentCourseRepository.cs",
+              "ToolTip": "C:\\Users\\Adalet\\Desktop\\UniversityManagementApi\\UniversityManagementApi\\Repositories\\Concrete\\StudentCourseRepository.cs",
+              "RelativeToolTip": "UniversityManagementApi\\Repositories\\Concrete\\StudentCourseRepository.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAIAywCMAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-26T07:38:14.106Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Adalet\\Desktop\\UniversityManagementApi\\UniversityManagementApi\\appsettings.json",
+              "RelativeDocumentMoniker": "UniversityManagementApi\\appsettings.json",
+              "ToolTip": "C:\\Users\\Adalet\\Desktop\\UniversityManagementApi\\UniversityManagementApi\\appsettings.json",
+              "RelativeToolTip": "UniversityManagementApi\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-08-24T13:34:43.618Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UniversityManagementApi.http",
+              "DocumentMoniker": "C:\\Users\\Adalet\\Desktop\\UniversityManagementApi\\UniversityManagementApi\\UniversityManagementApi.http",
+              "RelativeDocumentMoniker": "UniversityManagementApi\\UniversityManagementApi.http",
+              "ToolTip": "C:\\Users\\Adalet\\Desktop\\UniversityManagementApi\\UniversityManagementApi\\UniversityManagementApi.http",
+              "RelativeToolTip": "UniversityManagementApi\\UniversityManagementApi.http",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2026-08-26T12:19:49.205Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Department .cs",
+              "DocumentMoniker": "C:\\Users\\Adalet\\Desktop\\UniversityManagementApi\\UniversityManagementApi\\Entities\\Department .cs",
+              "RelativeDocumentMoniker": "UniversityManagementApi\\Entities\\Department .cs",
+              "ToolTip": "C:\\Users\\Adalet\\Desktop\\UniversityManagementApi\\UniversityManagementApi\\Entities\\Department .cs",
+              "RelativeToolTip": "UniversityManagementApi\\Entities\\Department .cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABRAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-24T13:39:20.51Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "StudentCourse.cs",
+              "DocumentMoniker": "C:\\Users\\Adalet\\Desktop\\UniversityManagementApi\\UniversityManagementApi\\Entities\\StudentCourse.cs",
+              "RelativeDocumentMoniker": "UniversityManagementApi\\Entities\\StudentCourse.cs",
+              "ToolTip": "C:\\Users\\Adalet\\Desktop\\UniversityManagementApi\\UniversityManagementApi\\Entities\\StudentCourse.cs",
+              "RelativeToolTip": "UniversityManagementApi\\Entities\\StudentCourse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-24T13:40:45.499Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "TeacherOffice.cs",
+              "DocumentMoniker": "C:\\Users\\Adalet\\Desktop\\UniversityManagementApi\\UniversityManagementApi\\Entities\\TeacherOffice.cs",
+              "RelativeDocumentMoniker": "UniversityManagementApi\\Entities\\TeacherOffice.cs",
+              "ToolTip": "C:\\Users\\Adalet\\Desktop\\UniversityManagementApi\\UniversityManagementApi\\Entities\\TeacherOffice.cs",
+              "RelativeToolTip": "UniversityManagementApi\\Entities\\TeacherOffice.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-24T13:41:11.955Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Teacher.cs",
+              "DocumentMoniker": "C:\\Users\\Adalet\\Desktop\\UniversityManagementApi\\UniversityManagementApi\\Entities\\Teacher.cs",
+              "RelativeDocumentMoniker": "UniversityManagementApi\\Entities\\Teacher.cs",
+              "ToolTip": "C:\\Users\\Adalet\\Desktop\\UniversityManagementApi\\UniversityManagementApi\\Entities\\Teacher.cs",
+              "RelativeToolTip": "UniversityManagementApi\\Entities\\Teacher.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAA1wBMAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-24T13:39:50.827Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "StudentCoursesController.cs",
+              "DocumentMoniker": "C:\\Users\\Adalet\\Desktop\\UniversityManagementApi\\UniversityManagementApi\\Controllers\\StudentCoursesController.cs",
+              "RelativeDocumentMoniker": "UniversityManagementApi\\Controllers\\StudentCoursesController.cs",
+              "ToolTip": "C:\\Users\\Adalet\\Desktop\\UniversityManagementApi\\UniversityManagementApi\\Controllers\\StudentCoursesController.cs",
+              "RelativeToolTip": "UniversityManagementApi\\Controllers\\StudentCoursesController.cs",
+              "ViewState": "AgIAAFIAAAAAAAAAAAAAAGwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-26T08:27:01.151Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "StudentsController.cs",
+              "DocumentMoniker": "C:\\Users\\Adalet\\Desktop\\UniversityManagementApi\\UniversityManagementApi\\Controllers\\StudentsController.cs",
+              "RelativeDocumentMoniker": "UniversityManagementApi\\Controllers\\StudentsController.cs",
+              "ToolTip": "C:\\Users\\Adalet\\Desktop\\UniversityManagementApi\\UniversityManagementApi\\Controllers\\StudentsController.cs",
+              "RelativeToolTip": "UniversityManagementApi\\Controllers\\StudentsController.cs",
+              "ViewState": "AgIAADgAAAAAAAAAAAAAAFIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-26T08:26:28.522Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "TeacherOfficesController.cs",
+              "DocumentMoniker": "C:\\Users\\Adalet\\Desktop\\UniversityManagementApi\\UniversityManagementApi\\Controllers\\TeacherOfficesController.cs",
+              "RelativeDocumentMoniker": "UniversityManagementApi\\Controllers\\TeacherOfficesController.cs",
+              "ToolTip": "C:\\Users\\Adalet\\Desktop\\UniversityManagementApi\\UniversityManagementApi\\Controllers\\TeacherOfficesController.cs",
+              "RelativeToolTip": "UniversityManagementApi\\Controllers\\TeacherOfficesController.cs",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAAAFkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-26T08:29:02.645Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "CoursesController.cs",
+              "DocumentMoniker": "C:\\Users\\Adalet\\Desktop\\UniversityManagementApi\\UniversityManagementApi\\Controllers\\CoursesController.cs",
+              "RelativeDocumentMoniker": "UniversityManagementApi\\Controllers\\CoursesController.cs",
+              "ToolTip": "C:\\Users\\Adalet\\Desktop\\UniversityManagementApi\\UniversityManagementApi\\Controllers\\CoursesController.cs",
+              "RelativeToolTip": "UniversityManagementApi\\Controllers\\CoursesController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-26T08:27:21.649Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Adalet\\Desktop\\UniversityManagementApi\\UniversityManagementApi\\Program.cs",
+              "RelativeDocumentMoniker": "UniversityManagementApi\\Program.cs",
+              "ToolTip": "C:\\Users\\Adalet\\Desktop\\UniversityManagementApi\\UniversityManagementApi\\Program.cs",
+              "RelativeToolTip": "UniversityManagementApi\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-25T12:20:17.149Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "TeachersController.cs",
+              "DocumentMoniker": "C:\\Users\\Adalet\\Desktop\\UniversityManagementApi\\UniversityManagementApi\\Controllers\\TeachersController.cs",
+              "RelativeDocumentMoniker": "UniversityManagementApi\\Controllers\\TeachersController.cs",
+              "ToolTip": "C:\\Users\\Adalet\\Desktop\\UniversityManagementApi\\UniversityManagementApi\\Controllers\\TeachersController.cs",
+              "RelativeToolTip": "UniversityManagementApi\\Controllers\\TeachersController.cs",
+              "ViewState": "AgIAADkAAAAAAAAAAAAAAFMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-26T08:28:45.501Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "IStudentRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Adalet\\Desktop\\UniversityManagementApi\\UniversityManagementApi\\Repositories\\Interfaces\\IStudentRepository.cs",
+              "RelativeDocumentMoniker": "UniversityManagementApi\\Repositories\\Interfaces\\IStudentRepository.cs",
+              "ToolTip": "C:\\Users\\Adalet\\Desktop\\UniversityManagementApi\\UniversityManagementApi\\Repositories\\Interfaces\\IStudentRepository.cs",
+              "RelativeToolTip": "UniversityManagementApi\\Repositories\\Interfaces\\IStudentRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-26T06:57:22.082Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "StudentRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Adalet\\Desktop\\UniversityManagementApi\\UniversityManagementApi\\Repositories\\Concrete\\StudentRepository.cs",
+              "RelativeDocumentMoniker": "UniversityManagementApi\\Repositories\\Concrete\\StudentRepository.cs",
+              "ToolTip": "C:\\Users\\Adalet\\Desktop\\UniversityManagementApi\\UniversityManagementApi\\Repositories\\Concrete\\StudentRepository.cs",
+              "RelativeToolTip": "UniversityManagementApi\\Repositories\\Concrete\\StudentRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACgAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-26T07:38:01.848Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "DepartmentRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Adalet\\Desktop\\UniversityManagementApi\\UniversityManagementApi\\Repositories\\Concrete\\DepartmentRepository.cs",
+              "RelativeDocumentMoniker": "UniversityManagementApi\\Repositories\\Concrete\\DepartmentRepository.cs",
+              "ToolTip": "C:\\Users\\Adalet\\Desktop\\UniversityManagementApi\\UniversityManagementApi\\Repositories\\Concrete\\DepartmentRepository.cs",
+              "RelativeToolTip": "UniversityManagementApi\\Repositories\\Concrete\\DepartmentRepository.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAA4wCsAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-26T07:36:31.984Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "CourseRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Adalet\\Desktop\\UniversityManagementApi\\UniversityManagementApi\\Repositories\\Concrete\\CourseRepository.cs",
+              "RelativeDocumentMoniker": "UniversityManagementApi\\Repositories\\Concrete\\CourseRepository.cs",
+              "ToolTip": "C:\\Users\\Adalet\\Desktop\\UniversityManagementApi\\UniversityManagementApi\\Repositories\\Concrete\\CourseRepository.cs",
+              "RelativeToolTip": "UniversityManagementApi\\Repositories\\Concrete\\CourseRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-26T07:37:05.128Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "IStudentCourseRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Adalet\\Desktop\\UniversityManagementApi\\UniversityManagementApi\\Repositories\\Interfaces\\IStudentCourseRepository.cs",
+              "RelativeDocumentMoniker": "UniversityManagementApi\\Repositories\\Interfaces\\IStudentCourseRepository.cs",
+              "ToolTip": "C:\\Users\\Adalet\\Desktop\\UniversityManagementApi\\UniversityManagementApi\\Repositories\\Interfaces\\IStudentCourseRepository.cs",
+              "RelativeToolTip": "UniversityManagementApi\\Repositories\\Interfaces\\IStudentCourseRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-26T06:57:40.196Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "TeacherOfficeRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Adalet\\Desktop\\UniversityManagementApi\\UniversityManagementApi\\Repositories\\Concrete\\TeacherOfficeRepository.cs",
+              "RelativeDocumentMoniker": "UniversityManagementApi\\Repositories\\Concrete\\TeacherOfficeRepository.cs",
+              "ToolTip": "C:\\Users\\Adalet\\Desktop\\UniversityManagementApi\\UniversityManagementApi\\Repositories\\Concrete\\TeacherOfficeRepository.cs",
+              "RelativeToolTip": "UniversityManagementApi\\Repositories\\Concrete\\TeacherOfficeRepository.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAYwC0AAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-26T07:37:43.901Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "IDepartmentRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Adalet\\Desktop\\UniversityManagementApi\\UniversityManagementApi\\Repositories\\Interfaces\\IDepartmentRepository.cs",
+              "RelativeDocumentMoniker": "UniversityManagementApi\\Repositories\\Interfaces\\IDepartmentRepository.cs",
+              "ToolTip": "C:\\Users\\Adalet\\Desktop\\UniversityManagementApi\\UniversityManagementApi\\Repositories\\Interfaces\\IDepartmentRepository.cs",
+              "RelativeToolTip": "UniversityManagementApi\\Repositories\\Interfaces\\IDepartmentRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-26T06:56:32.637Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "ICourseRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Adalet\\Desktop\\UniversityManagementApi\\UniversityManagementApi\\Repositories\\Interfaces\\ICourseRepository.cs",
+              "RelativeDocumentMoniker": "UniversityManagementApi\\Repositories\\Interfaces\\ICourseRepository.cs",
+              "ToolTip": "C:\\Users\\Adalet\\Desktop\\UniversityManagementApi\\UniversityManagementApi\\Repositories\\Interfaces\\ICourseRepository.cs",
+              "RelativeToolTip": "UniversityManagementApi\\Repositories\\Interfaces\\ICourseRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-26T06:57:12.027Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "ITeacherRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Adalet\\Desktop\\UniversityManagementApi\\UniversityManagementApi\\Repositories\\Interfaces\\ITeacherRepository.cs",
+              "RelativeDocumentMoniker": "UniversityManagementApi\\Repositories\\Interfaces\\ITeacherRepository.cs",
+              "ToolTip": "C:\\Users\\Adalet\\Desktop\\UniversityManagementApi\\UniversityManagementApi\\Repositories\\Interfaces\\ITeacherRepository.cs",
+              "RelativeToolTip": "UniversityManagementApi\\Repositories\\Interfaces\\ITeacherRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-26T06:57:54.501Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "ITeacherOfficeRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Adalet\\Desktop\\UniversityManagementApi\\UniversityManagementApi\\Repositories\\Interfaces\\ITeacherOfficeRepository.cs",
+              "RelativeDocumentMoniker": "UniversityManagementApi\\Repositories\\Interfaces\\ITeacherOfficeRepository.cs",
+              "ToolTip": "C:\\Users\\Adalet\\Desktop\\UniversityManagementApi\\UniversityManagementApi\\Repositories\\Interfaces\\ITeacherOfficeRepository.cs",
+              "RelativeToolTip": "UniversityManagementApi\\Repositories\\Interfaces\\ITeacherOfficeRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-26T06:58:08.313Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "20260826061959_AddFluentConfigurations.cs",
+              "DocumentMoniker": "C:\\Users\\Adalet\\Desktop\\UniversityManagementApi\\UniversityManagementApi\\Migrations\\20260826061959_AddFluentConfigurations.cs",
+              "RelativeDocumentMoniker": "UniversityManagementApi\\Migrations\\20260826061959_AddFluentConfigurations.cs",
+              "ToolTip": "C:\\Users\\Adalet\\Desktop\\UniversityManagementApi\\UniversityManagementApi\\Migrations\\20260826061959_AddFluentConfigurations.cs",
+              "RelativeToolTip": "UniversityManagementApi\\Migrations\\20260826061959_AddFluentConfigurations.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-26T06:19:59.586Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Adalet\\Desktop\\UniversityManagementApi\\UniversityManagementApi\\Data\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "UniversityManagementApi\\Data\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\Adalet\\Desktop\\UniversityManagementApi\\UniversityManagementApi\\Data\\AppDbContext.cs",
+              "RelativeToolTip": "UniversityManagementApi\\Data\\AppDbContext.cs",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAAABoAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-24T13:36:39.521Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "20260825124428_InitialCreate.cs",
+              "DocumentMoniker": "C:\\Users\\Adalet\\Desktop\\UniversityManagementApi\\UniversityManagementApi\\Migrations\\20260825124428_InitialCreate.cs",
+              "RelativeDocumentMoniker": "UniversityManagementApi\\Migrations\\20260825124428_InitialCreate.cs",
+              "ToolTip": "C:\\Users\\Adalet\\Desktop\\UniversityManagementApi\\UniversityManagementApi\\Migrations\\20260825124428_InitialCreate.cs",
+              "RelativeToolTip": "UniversityManagementApi\\Migrations\\20260825124428_InitialCreate.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-25T12:44:28.553Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
