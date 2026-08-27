@@ -21,7 +21,9 @@ namespace UniversityManagementApi.Repositories.Concrete
                 .ToListAsync();
         }
 
-        public async Task<StudentCourse?> GetByIdAsync(int studentId, int courseId)
+        public async Task<StudentCourse?> GetByIdAsync(
+            int studentId,
+            int courseId)
         {
             return await _context.StudentCourses
                 .AsNoTracking()
@@ -32,19 +34,23 @@ namespace UniversityManagementApi.Repositories.Concrete
 
         public async Task AddAsync(StudentCourse studentCourse)
         {
-            await _context.StudentCourses.AddAsync(studentCourse);
+            await _context.StudentCourses
+                .AddAsync(studentCourse);
+
             await _context.SaveChangesAsync();
         }
 
         public async Task UpdateAsync(StudentCourse studentCourse)
         {
             _context.StudentCourses.Update(studentCourse);
+
             await _context.SaveChangesAsync();
         }
 
         public async Task DeleteAsync(StudentCourse studentCourse)
         {
             _context.StudentCourses.Remove(studentCourse);
+
             await _context.SaveChangesAsync();
         }
     }

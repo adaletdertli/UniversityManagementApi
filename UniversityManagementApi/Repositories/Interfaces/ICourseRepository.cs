@@ -2,12 +2,7 @@
 
 namespace UniversityManagementApi.Repositories.Interfaces
 {
-    public interface ICourseRepository
+    public interface ICourseRepository : IGenericRepository<Course>
     {
-        Task<List<Course>> GetAllAsync();
-        Task<Course?> GetByIdAsync(int id);
-        Task AddAsync(Course course);
-        Task UpdateAsync(Course course);
-        Task DeleteAsync(Course course);
     }
 }

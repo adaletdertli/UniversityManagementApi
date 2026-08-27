@@ -5,45 +5,53 @@ using UniversityManagementApi.Repositories.Interfaces;
 
 namespace UniversityManagementApi.Repositories.Concrete
 {
-    public class StudentRepository : IStudentRepository
+    public class StudentRepository : GenericRepository<Student>, IStudentRepository
     {
-        private readonly AppDbContext _context;
-
         public StudentRepository(AppDbContext context)
+            : base(context)
         {
-            _context = context;
         }
 
-        public async Task<List<Student>> GetAllAsync()
+        public async Task<List<Student>> GetStudentsByCourseAsync(int courseId)
         {
             return await _context.Students
+                .Where(s => s.StudentCourses
+                    .Any(sc => sc.CourseId == courseId))
                 .AsNoTracking()
                 .ToListAsync();
         }
 
-        public async Task<Student?> GetByIdAsync(int id)
+        public async Task<List<StudentCourse>> GetStudentCoursesAsync(int studentId)
+        {
+            return await _context.StudentCourses
+                .Where(sc => sc.StudentId == studentId)
+                .Include(sc => sc.Course)
+                .AsNoTracking()
+                .ToListAsync();
+        }
+
+        public async Task<double?> GetStudentAverageAsync(int studentId)
+        {
+            var grades = _context.StudentCourses
+                .Where(sc => sc.StudentId == studentId);
+
+            if (!await grades.AnyAsync())
+            {
+                return null;
+            }
+
+            return await grades.AverageAsync(sc => sc.Grade);
+        }
+
+        public async Task<List<Student>> GetTopStudentsAsync(int count)
         {
             return await _context.Students
+                .Where(s => s.StudentCourses.Any())
+                .OrderByDescending(s =>
+                    s.StudentCourses.Average(sc => sc.Grade))
+                .Take(count)
                 .AsNoTracking()
-                .FirstOrDefaultAsync(s => s.Id == id);
-        }
-
-        public async Task AddAsync(Student student)
-        {
-            await _context.Students.AddAsync(student);
-            await _context.SaveChangesAsync();
-        }
-
-        public async Task UpdateAsync(Student student)
-        {
-            _context.Students.Update(student);
-            await _context.SaveChangesAsync();
-        }
-
-        public async Task DeleteAsync(Student student)
-        {
-            _context.Students.Remove(student);
-            await _context.SaveChangesAsync();
+                .ToListAsync();
         }
     }
 }

@@ -79,5 +79,42 @@ namespace UniversityManagementApi.Controllers
 
             return NoContent();
         }
+
+        [HttpGet("course/{courseId}")]
+        public async Task<IActionResult> GetStudentsByCourse(int courseId)
+        {
+            var students = await _studentRepository.GetStudentsByCourseAsync(courseId);
+
+            return Ok(students);
+        }
+
+        [HttpGet("{studentId}/courses")]
+        public async Task<IActionResult> GetStudentCourses(int studentId)
+        {
+            var courses = await _studentRepository.GetStudentCoursesAsync(studentId);
+
+            return Ok(courses);
+        }
+
+        [HttpGet("{studentId}/average")]
+        public async Task<IActionResult> GetStudentAverage(int studentId)
+        {
+            var average = await _studentRepository.GetStudentAverageAsync(studentId);
+
+            if (average == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(average);
+        }
+
+        [HttpGet("top/{count}")]
+        public async Task<IActionResult> GetTopStudents(int count)
+        {
+            var students = await _studentRepository.GetTopStudentsAsync(count);
+
+            return Ok(students);
+        }
     }
 }

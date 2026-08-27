@@ -3,6 +3,8 @@
 GET {{UniversityManagementApi_HostAddress}}/api/students
 Accept: application/json
 
+
+
 ###
 
 POST {{UniversityManagementApi_HostAddress}}/api/students
@@ -100,3 +102,10 @@ Content-Type: application/json
   "enrollmentDate": "2026-08-26T00:00:00Z",
   "grade": 85
 }
+###
+GET {{UniversityManagementApi_HostAddress}}/api/students/course/1
+Accept: application/json
+
+###
+  GET {{UniversityManagementApi_HostAddress}}/api/students/2/courses
+Accept: application/json

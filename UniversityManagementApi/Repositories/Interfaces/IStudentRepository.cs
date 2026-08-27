@@ -2,12 +2,15 @@
 
 namespace UniversityManagementApi.Repositories.Interfaces
 {
-    public interface IStudentRepository
+    public interface IStudentRepository : IGenericRepository<Student>
     {
-        Task<List<Student>> GetAllAsync();
-        Task<Student?> GetByIdAsync(int id);
-        Task AddAsync(Student student);
-        Task UpdateAsync(Student student);
-        Task DeleteAsync(Student student);
+        Task<List<Student>> GetStudentsByCourseAsync(int courseId);
+
+        Task<List<StudentCourse>> GetStudentCoursesAsync(int studentId);
+
+        Task<double?> GetStudentAverageAsync(int studentId);
+
+        Task<List<Student>> GetTopStudentsAsync(int count);
+
     }
 }
