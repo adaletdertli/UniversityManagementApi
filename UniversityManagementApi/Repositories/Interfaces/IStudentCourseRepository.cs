@@ -15,5 +15,13 @@ namespace UniversityManagementApi.Repositories.Interfaces
         Task UpdateAsync(StudentCourse studentCourse);
 
         Task DeleteAsync(StudentCourse studentCourse);
+
+        Task<List<StudentCourse>> GetByMinimumGradeAsync(double grade);
+
+        Task<double?> GetHighestGradeAsync();
+
+        Task<double?> GetLowestGradeAsync();
+
+        Task<int> GetCourseCountByStudentAsync(int studentId);
     }
 }

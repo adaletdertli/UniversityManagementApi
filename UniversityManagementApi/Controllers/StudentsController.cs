@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using UniversityManagementApi.Entities;
-using UniversityManagementApi.Repositories.Interfaces;
+using UniversityManagementApi.DTOs.Students;
+using UniversityManagementApi.Services.Interfaces;
 
 namespace UniversityManagementApi.Controllers
 {
@@ -8,25 +8,26 @@ namespace UniversityManagementApi.Controllers
     [Route("api/[controller]")]
     public class StudentsController : ControllerBase
     {
-        private readonly IStudentRepository _studentRepository;
+        private readonly IStudentService _studentService;
 
-        public StudentsController(IStudentRepository studentRepository)
+        public StudentsController(IStudentService studentService)
         {
-            _studentRepository = studentRepository;
+            _studentService = studentService;
         }
 
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
-            var students = await _studentRepository.GetAllAsync();
+            var students = await _studentService.GetAllAsync();
 
             return Ok(students);
         }
 
-        [HttpGet("{id}")]
-        public async Task<IActionResult> GetById(int id)
+        [HttpGet("by-id")]
+        public async Task<IActionResult> GetById(
+            [FromQuery] int id)
         {
-            var student = await _studentRepository.GetByIdAsync(id);
+            var student = await _studentService.GetByIdAsync(id);
 
             if (student == null)
             {
@@ -37,9 +38,9 @@ namespace UniversityManagementApi.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Add(Student student)
+        public async Task<IActionResult> Add(StudentCreateDto dto)
         {
-            await _studentRepository.AddAsync(student);
+            var student = await _studentService.AddAsync(dto);
 
             return CreatedAtAction(
                 nameof(GetById),
@@ -48,58 +49,61 @@ namespace UniversityManagementApi.Controllers
             );
         }
 
-        [HttpPut("{id}")]
-        public async Task<IActionResult> Update(int id, Student student)
+        [HttpPut]
+        public async Task<IActionResult> Update(
+            [FromQuery] int id,
+            StudentUpdateDto dto)
         {
-            var existingStudent = await _studentRepository.GetByIdAsync(id);
+            var result = await _studentService.UpdateAsync(id, dto);
 
-            if (existingStudent == null)
+            if (!result)
             {
                 return NotFound();
             }
 
-            student.Id = id;
-
-            await _studentRepository.UpdateAsync(student);
-
             return NoContent();
         }
 
-        [HttpDelete("{id}")]
-        public async Task<IActionResult> Delete(int id)
+        [HttpDelete]
+        public async Task<IActionResult> Delete(
+            [FromQuery] int id)
         {
-            var student = await _studentRepository.GetByIdAsync(id);
+            var result = await _studentService.DeleteAsync(id);
 
-            if (student == null)
+            if (!result)
             {
                 return NotFound();
             }
 
-            await _studentRepository.DeleteAsync(student);
-
             return NoContent();
         }
 
-        [HttpGet("course/{courseId}")]
-        public async Task<IActionResult> GetStudentsByCourse(int courseId)
+        [HttpGet("course")]
+        public async Task<IActionResult> GetStudentsByCourse(
+            [FromQuery] int courseId)
         {
-            var students = await _studentRepository.GetStudentsByCourseAsync(courseId);
+            var students =
+                await _studentService.GetStudentsByCourseAsync(courseId);
 
             return Ok(students);
         }
 
-        [HttpGet("{studentId}/courses")]
-        public async Task<IActionResult> GetStudentCourses(int studentId)
+        [HttpGet("courses")]
+        public async Task<IActionResult> GetStudentCourses(
+            [FromQuery] int studentId)
         {
-            var courses = await _studentRepository.GetStudentCoursesAsync(studentId);
+            var courses =
+                await _studentService.GetStudentCoursesAsync(studentId);
 
             return Ok(courses);
         }
 
-        [HttpGet("{studentId}/average")]
-        public async Task<IActionResult> GetStudentAverage(int studentId)
+        [HttpGet("average")]
+        public async Task<IActionResult> GetStudentAverage(
+            [FromQuery] int studentId)
         {
-            var average = await _studentRepository.GetStudentAverageAsync(studentId);
+            var average =
+                await _studentService.GetStudentAverageAsync(studentId);
 
             if (average == null)
             {
@@ -109,10 +113,72 @@ namespace UniversityManagementApi.Controllers
             return Ok(average);
         }
 
-        [HttpGet("top/{count}")]
-        public async Task<IActionResult> GetTopStudents(int count)
+        [HttpGet("top")]
+        public async Task<IActionResult> GetTopStudents(
+            [FromQuery] int count)
         {
-            var students = await _studentRepository.GetTopStudentsAsync(count);
+            var students =
+                await _studentService.GetTopStudentsAsync(count);
+
+            return Ok(students);
+        }
+
+        [HttpGet("search")]
+        public async Task<IActionResult> SearchStudents(
+            [FromQuery] string name)
+        {
+            var students =
+                await _studentService.SearchStudentsAsync(name);
+
+            return Ok(students);
+        }
+
+        [HttpGet("number")]
+        public async Task<IActionResult> GetStudentsByStudentNumber(
+            [FromQuery] string prefix)
+        {
+            var students =
+                await _studentService.GetStudentsByStudentNumberAsync(prefix);
+
+            return Ok(students);
+        }
+
+        [HttpGet("paged")]
+        public async Task<IActionResult> GetStudentsPaged(
+            [FromQuery] int skip,
+            [FromQuery] int take)
+        {
+            var students =
+                await _studentService.GetStudentsPagedAsync(skip, take);
+
+            return Ok(students);
+        }
+
+        [HttpGet("ordered")]
+        public async Task<IActionResult> GetStudentsOrderedByName()
+        {
+            var students =
+                await _studentService.GetStudentsOrderedByNameAsync();
+
+            return Ok(students);
+        }
+
+        [HttpGet("first")]
+        public async Task<IActionResult> GetFirstStudents(
+            [FromQuery] int count)
+        {
+            var students =
+                await _studentService.GetFirstStudentsAsync(count);
+
+            return Ok(students);
+        }
+
+        [HttpGet("min-grade")]
+        public async Task<IActionResult> GetStudentsByMinGrade(
+            [FromQuery] double grade)
+        {
+            var students =
+                await _studentService.GetStudentsByMinGradeAsync(grade);
 
             return Ok(students);
         }

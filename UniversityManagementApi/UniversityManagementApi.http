@@ -107,5 +107,21 @@ GET {{UniversityManagementApi_HostAddress}}/api/students/course/1
 Accept: application/json
 
 ###
-  GET {{UniversityManagementApi_HostAddress}}/api/students/2/courses
+GET {{UniversityManagementApi_HostAddress}}/api/students/2/courses
+Accept: application/json
+
+###
+GET {{UniversityManagementApi_HostAddress}}/api/courses
+Accept: application/json
+
+###
+GET {{UniversityManagementApi_HostAddress}}/api/teachers
+Accept: application/json
+
+###
+GET {{UniversityManagementApi_HostAddress}}/api/departments
+Accept: application/json
+
+###
+GET {{UniversityManagementApi_HostAddress}}/api/teacheroffices
 Accept: application/json

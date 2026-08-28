@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using UniversityManagementApi.Entities;
-using UniversityManagementApi.Repositories.Interfaces;
+using UniversityManagementApi.DTOs.TeacherOffices;
+using UniversityManagementApi.Services.Interfaces;
 
 namespace UniversityManagementApi.Controllers
 {
@@ -8,81 +8,75 @@ namespace UniversityManagementApi.Controllers
     [Route("api/[controller]")]
     public class TeacherOfficesController : ControllerBase
     {
-        private readonly ITeacherOfficeRepository _teacherOfficeRepository;
+        private readonly ITeacherOfficeService _teacherOfficeService;
 
         public TeacherOfficesController(
-            ITeacherOfficeRepository teacherOfficeRepository)
+            ITeacherOfficeService teacherOfficeService)
         {
-            _teacherOfficeRepository = teacherOfficeRepository;
+            _teacherOfficeService = teacherOfficeService;
         }
 
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
-            var teacherOffices =
-                await _teacherOfficeRepository.GetAllAsync();
+            var offices = await _teacherOfficeService.GetAllAsync();
 
-            return Ok(teacherOffices);
+            return Ok(offices);
         }
 
-        [HttpGet("{id}")]
-        public async Task<IActionResult> GetById(int id)
+        [HttpGet("by-id")]
+        public async Task<IActionResult> GetById(
+            [FromQuery] int id)
         {
-            var teacherOffice =
-                await _teacherOfficeRepository.GetByIdAsync(id);
+            var office = await _teacherOfficeService.GetByIdAsync(id);
 
-            if (teacherOffice == null)
+            if (office == null)
             {
                 return NotFound();
             }
 
-            return Ok(teacherOffice);
+            return Ok(office);
         }
 
         [HttpPost]
-        public async Task<IActionResult> Add(TeacherOffice teacherOffice)
+        public async Task<IActionResult> Add(TeacherOfficeCreateDto dto)
         {
-            await _teacherOfficeRepository.AddAsync(teacherOffice);
+            var office = await _teacherOfficeService.AddAsync(dto);
 
             return CreatedAtAction(
                 nameof(GetById),
-                new { id = teacherOffice.Id },
-                teacherOffice
+                new { id = office.Id },
+                office
             );
         }
 
-        [HttpPut("{id}")]
+        [HttpPut]
         public async Task<IActionResult> Update(
-            int id,
-            TeacherOffice teacherOffice)
+            [FromQuery] int id,
+            TeacherOfficeUpdateDto dto)
         {
-            var existingTeacherOffice =
-                await _teacherOfficeRepository.GetByIdAsync(id);
+            var result =
+                await _teacherOfficeService.UpdateAsync(id, dto);
 
-            if (existingTeacherOffice == null)
+            if (!result)
             {
                 return NotFound();
             }
-
-            teacherOffice.Id = id;
-
-            await _teacherOfficeRepository.UpdateAsync(teacherOffice);
 
             return NoContent();
         }
 
-        [HttpDelete("{id}")]
-        public async Task<IActionResult> Delete(int id)
+        [HttpDelete]
+        public async Task<IActionResult> Delete(
+            [FromQuery] int id)
         {
-            var teacherOffice =
-                await _teacherOfficeRepository.GetByIdAsync(id);
+            var result =
+                await _teacherOfficeService.DeleteAsync(id);
 
-            if (teacherOffice == null)
+            if (!result)
             {
                 return NotFound();
             }
-
-            await _teacherOfficeRepository.DeleteAsync(teacherOffice);
 
             return NoContent();
         }

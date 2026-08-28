@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using UniversityManagementApi.Entities;
-using UniversityManagementApi.Repositories.Interfaces;
+using UniversityManagementApi.DTOs.StudentCourses;
+using UniversityManagementApi.Services.Interfaces;
 
 namespace UniversityManagementApi.Controllers
 {
@@ -8,33 +8,32 @@ namespace UniversityManagementApi.Controllers
     [Route("api/[controller]")]
     public class StudentCoursesController : ControllerBase
     {
-        private readonly IStudentCourseRepository _studentCourseRepository;
+        private readonly IStudentCourseService _studentCourseService;
 
         public StudentCoursesController(
-            IStudentCourseRepository studentCourseRepository)
+            IStudentCourseService studentCourseService)
         {
-            _studentCourseRepository = studentCourseRepository;
+            _studentCourseService = studentCourseService;
         }
 
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
             var studentCourses =
-                await _studentCourseRepository.GetAllAsync();
+                await _studentCourseService.GetAllAsync();
 
             return Ok(studentCourses);
         }
 
-        [HttpGet("{studentId}/{courseId}")]
+        [HttpGet("by-id")]
         public async Task<IActionResult> GetById(
-            int studentId,
-            int courseId)
+            [FromQuery] int studentId,
+            [FromQuery] int courseId)
         {
             var studentCourse =
-                await _studentCourseRepository.GetByIdAsync(
+                await _studentCourseService.GetByIdAsync(
                     studentId,
-                    courseId
-                );
+                    courseId);
 
             if (studentCourse == null)
             {
@@ -45,9 +44,11 @@ namespace UniversityManagementApi.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Add(StudentCourse studentCourse)
+        public async Task<IActionResult> Add(
+            StudentCourseCreateDto dto)
         {
-            await _studentCourseRepository.AddAsync(studentCourse);
+            var studentCourse =
+                await _studentCourseService.AddAsync(dto);
 
             return CreatedAtAction(
                 nameof(GetById),
@@ -60,50 +61,90 @@ namespace UniversityManagementApi.Controllers
             );
         }
 
-        [HttpPut("{studentId}/{courseId}")]
+        [HttpPut]
         public async Task<IActionResult> Update(
-            int studentId,
-            int courseId,
-            StudentCourse studentCourse)
+            [FromQuery] int studentId,
+            [FromQuery] int courseId,
+            StudentCourseUpdateDto dto)
         {
-            var existingStudentCourse =
-                await _studentCourseRepository.GetByIdAsync(
+            var result =
+                await _studentCourseService.UpdateAsync(
                     studentId,
-                    courseId
-                );
+                    courseId,
+                    dto);
 
-            if (existingStudentCourse == null)
+            if (!result)
             {
                 return NotFound();
             }
-
-            studentCourse.StudentId = studentId;
-            studentCourse.CourseId = courseId;
-
-            await _studentCourseRepository.UpdateAsync(studentCourse);
 
             return NoContent();
         }
 
-        [HttpDelete("{studentId}/{courseId}")]
+        [HttpDelete]
         public async Task<IActionResult> Delete(
-            int studentId,
-            int courseId)
+            [FromQuery] int studentId,
+            [FromQuery] int courseId)
         {
-            var studentCourse =
-                await _studentCourseRepository.GetByIdAsync(
+            var result =
+                await _studentCourseService.DeleteAsync(
                     studentId,
-                    courseId
-                );
+                    courseId);
 
-            if (studentCourse == null)
+            if (!result)
             {
                 return NotFound();
             }
 
-            await _studentCourseRepository.DeleteAsync(studentCourse);
-
             return NoContent();
+        }
+
+        [HttpGet("grade")]
+        public async Task<IActionResult> GetByMinimumGrade(
+            [FromQuery] double grade)
+        {
+            var studentCourses =
+                await _studentCourseService.GetByMinimumGradeAsync(grade);
+
+            return Ok(studentCourses);
+        }
+
+        [HttpGet("highest-grade")]
+        public async Task<IActionResult> GetHighestGrade()
+        {
+            var grade =
+                await _studentCourseService.GetHighestGradeAsync();
+
+            if (grade == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(grade);
+        }
+
+        [HttpGet("lowest-grade")]
+        public async Task<IActionResult> GetLowestGrade()
+        {
+            var grade =
+                await _studentCourseService.GetLowestGradeAsync();
+
+            if (grade == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(grade);
+        }
+
+        [HttpGet("student-course-count")]
+        public async Task<IActionResult> GetCourseCountByStudent(
+            [FromQuery] int studentId)
+        {
+            var count =
+                await _studentCourseService.GetCourseCountByStudentAsync(studentId);
+
+            return Ok(count);
         }
     }
 }

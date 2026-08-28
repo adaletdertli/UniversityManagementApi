@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using UniversityManagementApi.Entities;
-using UniversityManagementApi.Repositories.Interfaces;
+using UniversityManagementApi.DTOs.Teachers;
+using UniversityManagementApi.Services.Interfaces;
 
 namespace UniversityManagementApi.Controllers
 {
@@ -8,25 +8,26 @@ namespace UniversityManagementApi.Controllers
     [Route("api/[controller]")]
     public class TeachersController : ControllerBase
     {
-        private readonly ITeacherRepository _teacherRepository;
+        private readonly ITeacherService _teacherService;
 
-        public TeachersController(ITeacherRepository teacherRepository)
+        public TeachersController(ITeacherService teacherService)
         {
-            _teacherRepository = teacherRepository;
+            _teacherService = teacherService;
         }
 
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
-            var teachers = await _teacherRepository.GetAllAsync();
+            var teachers = await _teacherService.GetAllAsync();
 
             return Ok(teachers);
         }
 
-        [HttpGet("{id}")]
-        public async Task<IActionResult> GetById(int id)
+        [HttpGet("by-id")]
+        public async Task<IActionResult> GetById(
+            [FromQuery] int id)
         {
-            var teacher = await _teacherRepository.GetByIdAsync(id);
+            var teacher = await _teacherService.GetByIdAsync(id);
 
             if (teacher == null)
             {
@@ -37,9 +38,9 @@ namespace UniversityManagementApi.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Add(Teacher teacher)
+        public async Task<IActionResult> Add(TeacherCreateDto dto)
         {
-            await _teacherRepository.AddAsync(teacher);
+            var teacher = await _teacherService.AddAsync(dto);
 
             return CreatedAtAction(
                 nameof(GetById),
@@ -48,37 +49,53 @@ namespace UniversityManagementApi.Controllers
             );
         }
 
-        [HttpPut("{id}")]
-        public async Task<IActionResult> Update(int id, Teacher teacher)
+        [HttpPut]
+        public async Task<IActionResult> Update(
+            [FromQuery] int id,
+            TeacherUpdateDto dto)
         {
-            var existingTeacher =
-                await _teacherRepository.GetByIdAsync(id);
+            var result = await _teacherService.UpdateAsync(id, dto);
 
-            if (existingTeacher == null)
+            if (!result)
             {
                 return NotFound();
             }
-
-            teacher.Id = id;
-
-            await _teacherRepository.UpdateAsync(teacher);
 
             return NoContent();
         }
 
-        [HttpDelete("{id}")]
-        public async Task<IActionResult> Delete(int id)
+        [HttpDelete]
+        public async Task<IActionResult> Delete(
+            [FromQuery] int id)
         {
-            var teacher = await _teacherRepository.GetByIdAsync(id);
+            var result = await _teacherService.DeleteAsync(id);
 
-            if (teacher == null)
+            if (!result)
             {
                 return NotFound();
             }
 
-            await _teacherRepository.DeleteAsync(teacher);
-
             return NoContent();
+        }
+
+        [HttpGet("department")]
+        public async Task<IActionResult> GetTeachersByDepartment(
+            [FromQuery] int departmentId)
+        {
+            var teachers =
+                await _teacherService.GetTeachersByDepartmentAsync(departmentId);
+
+            return Ok(teachers);
+        }
+
+        [HttpGet("search")]
+        public async Task<IActionResult> SearchTeachers(
+            [FromQuery] string name)
+        {
+            var teachers =
+                await _teacherService.SearchTeachersAsync(name);
+
+            return Ok(teachers);
         }
     }
 }

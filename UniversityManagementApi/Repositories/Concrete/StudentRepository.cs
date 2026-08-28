@@ -5,7 +5,8 @@ using UniversityManagementApi.Repositories.Interfaces;
 
 namespace UniversityManagementApi.Repositories.Concrete
 {
-    public class StudentRepository : GenericRepository<Student>, IStudentRepository
+    public class StudentRepository
+        : GenericRepository<Student>, IStudentRepository
     {
         public StudentRepository(AppDbContext context)
             : base(context)
@@ -25,6 +26,7 @@ namespace UniversityManagementApi.Repositories.Concrete
         {
             return await _context.StudentCourses
                 .Where(sc => sc.StudentId == studentId)
+                .Include(sc => sc.Student)
                 .Include(sc => sc.Course)
                 .AsNoTracking()
                 .ToListAsync();
@@ -53,5 +55,61 @@ namespace UniversityManagementApi.Repositories.Concrete
                 .AsNoTracking()
                 .ToListAsync();
         }
+
+        public async Task<List<Student>> SearchStudentsAsync(string name)
+        {
+            return await _context.Students
+                .Where(s =>
+                    s.FirstName.Contains(name) ||
+                    s.LastName.Contains(name))
+                .AsNoTracking()
+                .ToListAsync();
+        }
+
+        public async Task<List<Student>> GetStudentsByStudentNumberAsync(string prefix)
+        {
+            return await _context.Students
+                .Where(s => s.StudentNumber.ToString().StartsWith(prefix))
+                .AsNoTracking()
+                .ToListAsync();
+        }
+
+        public async Task<List<Student>> GetStudentsPagedAsync(int skip, int take)
+        {
+            return await _context.Students
+                .OrderBy(s => s.Id)
+                .Skip(skip)
+                .Take(take)
+                .AsNoTracking()
+                .ToListAsync();
+        }
+
+        public async Task<List<Student>> GetStudentsOrderedByNameAsync()
+        {
+            return await _context.Students
+                .OrderBy(s => s.FirstName)
+                .ThenBy(s => s.LastName)
+                .AsNoTracking()
+                .ToListAsync();
+        }
+
+        public async Task<List<Student>> GetFirstStudentsAsync(int count)
+        {
+            return await _context.Students
+                .OrderBy(s => s.Id)
+                .Take(count)
+                .AsNoTracking()
+                .ToListAsync();
+        }
+
+        public async Task<List<Student>> GetStudentsByMinGradeAsync(double grade)
+        {
+            return await _context.Students
+                .Where(s => s.StudentCourses
+                    .Any(sc => sc.Grade >= grade))
+                .AsNoTracking()
+                .ToListAsync();
+        }
     }
+
 }

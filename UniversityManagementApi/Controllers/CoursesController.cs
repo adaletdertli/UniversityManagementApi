@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using UniversityManagementApi.Entities;
-using UniversityManagementApi.Repositories.Interfaces;
+using UniversityManagementApi.DTOs.Courses;
+using UniversityManagementApi.Services.Interfaces;
 
 namespace UniversityManagementApi.Controllers
 {
@@ -8,25 +8,26 @@ namespace UniversityManagementApi.Controllers
     [Route("api/[controller]")]
     public class CoursesController : ControllerBase
     {
-        private readonly ICourseRepository _courseRepository;
+        private readonly ICourseService _courseService;
 
-        public CoursesController(ICourseRepository courseRepository)
+        public CoursesController(ICourseService courseService)
         {
-            _courseRepository = courseRepository;
+            _courseService = courseService;
         }
 
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
-            var courses = await _courseRepository.GetAllAsync();
+            var courses = await _courseService.GetAllAsync();
 
             return Ok(courses);
         }
 
-        [HttpGet("{id}")]
-        public async Task<IActionResult> GetById(int id)
+        [HttpGet("by-id")]
+        public async Task<IActionResult> GetById(
+            [FromQuery] int id)
         {
-            var course = await _courseRepository.GetByIdAsync(id);
+            var course = await _courseService.GetByIdAsync(id);
 
             if (course == null)
             {
@@ -37,9 +38,9 @@ namespace UniversityManagementApi.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Add(Course course)
+        public async Task<IActionResult> Add(CourseCreateDto dto)
         {
-            await _courseRepository.AddAsync(course);
+            var course = await _courseService.AddAsync(dto);
 
             return CreatedAtAction(
                 nameof(GetById),
@@ -48,36 +49,81 @@ namespace UniversityManagementApi.Controllers
             );
         }
 
-        [HttpPut("{id}")]
-        public async Task<IActionResult> Update(int id, Course course)
+        [HttpPut]
+        public async Task<IActionResult> Update(
+            [FromQuery] int id,
+            CourseUpdateDto dto)
         {
-            var existingCourse = await _courseRepository.GetByIdAsync(id);
+            var result = await _courseService.UpdateAsync(id, dto);
 
-            if (existingCourse == null)
+            if (!result)
             {
                 return NotFound();
             }
-
-            course.Id = id;
-
-            await _courseRepository.UpdateAsync(course);
 
             return NoContent();
         }
 
-        [HttpDelete("{id}")]
-        public async Task<IActionResult> Delete(int id)
+        [HttpDelete]
+        public async Task<IActionResult> Delete(
+            [FromQuery] int id)
         {
-            var course = await _courseRepository.GetByIdAsync(id);
+            var result = await _courseService.DeleteAsync(id);
 
-            if (course == null)
+            if (!result)
             {
                 return NotFound();
             }
 
-            await _courseRepository.DeleteAsync(course);
-
             return NoContent();
+        }
+
+        [HttpGet("teacher")]
+        public async Task<IActionResult> GetCoursesByTeacher(
+            [FromQuery] int teacherId)
+        {
+            var courses =
+                await _courseService.GetCoursesByTeacherAsync(teacherId);
+
+            return Ok(courses);
+        }
+
+        [HttpGet("popular")]
+        public async Task<IActionResult> GetMostPopularCourses(
+            [FromQuery] int count)
+        {
+            var courses =
+                await _courseService.GetMostPopularCoursesAsync(count);
+
+            return Ok(courses);
+        }
+
+        [HttpGet("credit")]
+        public async Task<IActionResult> GetCoursesByCredit(
+            [FromQuery] int credit)
+        {
+            var courses =
+                await _courseService.GetCoursesByCreditAsync(credit);
+
+            return Ok(courses);
+        }
+
+        [HttpGet("ordered-by-credit")]
+        public async Task<IActionResult> GetCoursesOrderedByCredit()
+        {
+            var courses =
+                await _courseService.GetCoursesOrderedByCreditAsync();
+
+            return Ok(courses);
+        }
+
+        [HttpGet("without-students")]
+        public async Task<IActionResult> GetCoursesWithoutStudents()
+        {
+            var courses =
+                await _courseService.GetCoursesWithoutStudentsAsync();
+
+            return Ok(courses);
         }
     }
 }
